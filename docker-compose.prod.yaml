@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  react_test: 
+    image: react-test-prod-i
+    build: 
+      dockerfile: Dockerfile.prod
+    container_name: react-test-prod-c
+    ports:
+      - 8080:80
+    environment:
+      - NODE_ENV=production
+      - APP_ENV=production
